@@ -43,6 +43,7 @@ function setRoomListeners(roomSocket, roomName){
       //let roomHost = message.data.roomHost
       //let roomId = message.data.roomId
       roomState = message.data.roomState
+      playersNum = message.data.players;
       //let selectedDifficulty = message.data.selectedDifficulty
       if(message.data.selectedSong){
         songName = message.data.selectedSong.songName
