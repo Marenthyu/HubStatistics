@@ -1,88 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta content="text/html; charset=utf-8" http-equiv="content-type">
-  <!-- Start Favicon-->
-  <link rel="apple-touch-icon" href="https://lowee.de/favicon.ico">
-  <link rel="icon" type="image/png" href="https://lowee.de/favicon.ico">
-  <!-- End Favicon -->
-  <!-- Start OEmbed -->
-  <meta content="hub.waifus.de" property="og:site_name">
-  <meta content="Multiplayer Hub" property="og:title">
-  <meta content="Hub info" property="og:description">
-  <meta content="#edeea8" name="theme-color">
-  <meta content="/resources/hub.png" property="og:image">
-  <!-- End OEmbed -->
-  <title>Multiplayer Hub</title>
-  <link href="https://cdn.assistant.moe/css/bulma.css" media="screen" rel="stylesheet">
-  <link href="https://cdn.assistant.moe/css/custom.css" rel="stylesheet">
-  <link href="https://cdn.assistant.moe/css/light.css" id="light-theme" rel="stylesheet">
-  <link href="https://cdn.assistant.moe/css/dark.css" id="dark-theme" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://cdn.assistant.moe/js/theme.js"></script>
-</head>
-<body>
-<!-- Start Nav Bar -->
-<nav class="navbar has-shadow" aria-label="main navigation">
-  <div class="container">
-    <div class="navbar-brand">
-      <a class="navbar-item">
-        <i class="fab fa-hubspot"></i>
-      </a>
-      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu"  aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div class="navbar-menu" id="navMenu">
-      <div class="navbar-start">
-        <div class="navbar-start">
-          <a class="navbar-item" href="https://bs.assistant.moe/Multiplayer">
-            Multiplayer Guide
-          </a>
-        </div>
-      </div>
-      <div class="navbar-end">
-        <a class="navbar-item donate" target="_blank" href="https://bs.assistant.moe/Donate">
-          <i class="fab fa-gratipay fa-2x"></i>
-        </a>
-        <a class="navbar-item discord" target="_blank" href="https://discord.gg/beatsabermods">
-          <i class="fab fa-discord fa-2x" title="Join the Beat Saber Mod Group"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-</nav>
-<!-- End Nav Bar -->
-<section class="section body">
-  <div class="container">
-    <div class="content">
-      <div class="columns">
-        <div class="column">
-          <h1 class="title">Multiplayer Hub <span class="subtitle" id="version"></span></h1>
-          <p>Host: <kbd>hub.waifus.de</kbd> Port: <kbd>3700</kbd></p>
-          <p>Secure WebSocket address: <kbd>wss://hub.waifus.de:3701</kbd></p>
-          <p>Rooms: <kbd id="roomNumber"> </kbd> Players: <kbd id="totalPlayers"> </kbd></p>
-          <div>
-            <ul id="rooms">
-            </ul>
-          </div>
-        </div>
-        <div class="column" id="roomInfo">
-          <div id="roomStatus">
-          </div>
-          <table id="players">
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Start Scripts -->
-<script src="https://cdn.assistant.moe/js/burger.js"></script>
-<script src="./resources/hubstats.js"></script>
-<!-- End Scripts -->
-</body>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+        <!-- Start Favicon-->
+        <link href="https://lowee.de/favicon.ico" rel="apple-touch-icon">
+        <link href="https://lowee.de/favicon.ico" rel="icon" type="image/png">
+        <!-- End Favicon -->
+        <!-- Start OEmbed -->
+        <meta content="hub.waifus.de" property="og:site_name">
+        <meta content="Multiplayer Hub" property="og:title">
+        <meta content="Hub info" property="og:description">
+        <meta content="#edeea8" name="theme-color">
+        <meta content="/resources/hub.png" property="og:image">
+        <!-- End OEmbed -->
+        <title>Multiplayer Hub</title>
+        <link href="https://cdn.assistant.moe/css/bulma.css" media="screen" rel="stylesheet">
+        <link href="https://cdn.assistant.moe/css/custom.css" rel="stylesheet">
+        <link href="https://cdn.assistant.moe/css/light.css" id="light-theme" rel="stylesheet">
+        <link href="https://cdn.assistant.moe/css/dark.css" id="dark-theme" rel="stylesheet">
+        <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+              integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+              rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <script src="https://lowee.de/hubtheme.js"></script>
+    </head>
+    <body>
+        <!-- Start Nav Bar -->
+        <nav aria-label="main navigation" class="navbar has-shadow">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="https://waifus.de/help">
+                        <img src="https://lowee.de/favicon.ico" alt="Waifu TCG Community">
+                    </a>
+                    <a aria-expanded="false" aria-label="menu" class="navbar-burger" data-target="navMenu"
+                       role="button">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div class="navbar-menu" id="navMenu">
+                    <div class="navbar-start">
+                        <div class="navbar-start">
+                            <a class="navbar-item" href="https://bs.assistant.moe/Multiplayer">
+                                Multiplayer Guide
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-end">
+                        <a class="navbar-item donate" href="https://bs.assistant.moe/Donate" target="_blank">
+                            <i class="fab fa-gratipay fa-2x"></i>&nbsp;Assistant
+                        </a>
+                        <a class="navbar-item donate" href="https://paypal.me/Marenthyu" target="_blank">
+                            <i class="fab fa-gratipay fa-2x"></i>&nbsp;Marenthyu
+                        </a>
+                        <a class="navbar-item discord" href="https://discord.gg/beatsabermods" target="_blank">
+                            <i class="fab fa-discord fa-2x" title="Join the Beat Saber Mod Group"></i>&nbsp;BSMG
+                        </a>
+                        <a class="navbar-item discord" href="https://waifus.de/discord" target="_blank">
+                            <i class="fab fa-discord fa-2x" title="Join the Waifu tCG Community"></i>&nbsp;Waifu TCG Community
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Nav Bar -->
+        <section class="section body">
+            <div class="container">
+                <div class="content">
+                    <div class="columns">
+                        <div class="column">
+                            <h1 class="title">Multiplayer Hub <span class="subtitle" id="version"></span></h1>
+                            <p>Host: <kbd>hub.waifus.de</kbd> Port: <kbd>3700</kbd></p>
+                            <p>Secure WebSocket address: <kbd>wss://hub.waifus.de:3701</kbd></p>
+                            <p>Rooms: <kbd id="roomNumber"> </kbd> Players: <kbd id="totalPlayers"> </kbd></p>
+                            <div>
+                                <ul id="rooms">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column" id="roomInfo">
+                            <div id="roomStatus">
+                            </div>
+                            <table id="players">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer" style="position: absolute; bottom: 0; right: 0; text-align: right; margin-right: 0.2rem;">
+                Credit where credit is due: Theme and original Statistics page by <a href="https://assistant.moe/">Assistant</a>;
+                This ServerHub hosted by <a href="https://marenthyu.de">Marenthyu</a>
+            </div>
+        </section>
+        <!-- Start Scripts -->
+        <script src="https://cdn.assistant.moe/js/burger.js"></script>
+        <script src="./resources/hubstats.js"></script>
+        <!-- End Scripts -->
+    </body>
 </html>
