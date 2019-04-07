@@ -139,7 +139,7 @@ function openRoom(element){
   if (typeof roomSocket !== 'undefined') {
     roomSocket.close()
   }
-    roomSocket = new WebSocket('wss://waifus.de:3701' + roomPath);
+    roomSocket = new WebSocket('wss://hub.waifus.de:3701' + roomPath);
     setRoomListeners(roomSocket, roomName)
 
 }
@@ -196,5 +196,5 @@ const statusObject = document.getElementById("roomStatus");
 const roomsObject = document.getElementById("rooms");
 
 // Create WebSocket connection.
-let socket = new WebSocket('wss://waifus.de:3701/');
+let socket = new WebSocket('wss://hub.waifus.de:3701/');
 setListeners(socket);
